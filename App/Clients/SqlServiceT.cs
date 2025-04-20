@@ -64,7 +64,7 @@ namespace SPAL.App.Clients
                 results.Add(model);
             }
 
-            return results;
+            return results.AsReadOnly();
         }
     }
 }
