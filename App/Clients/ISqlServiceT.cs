@@ -6,6 +6,6 @@ namespace SPAL.App.Clients
     {
         abstract Task<IReadOnlyCollection<T>> SubmitQuery(string query);
         abstract Task Submit(string query);
-        abstract Task<IEnumerable<T>> GetResultStream(string query);
+        abstract Task<Stream> GetResultStream(string query);
     }
 }

@@ -17,7 +17,7 @@ namespace SPAL.App.Clients
             _connectionString = connectionString;
         }
 
-        public async Task<IEnumerable<T>> GetResultStream(string query)
+        public async Task<Stream> GetResultStream(string query)
         {
             throw new NotImplementedException();
         }
