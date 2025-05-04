@@ -15,7 +15,7 @@ namespace SPAL.App.Routes
         [Description("Get users")]
         internal static async Task<IResult> Get([FromServices]ISqlServiceT<UserModel> userClient)
         {
-            var user = await userClient.SubmitQuery("SELECT TOP (1000) [id], [name], [email] FROM [SPAL].[dbo].[user]");
+            var user = await userClient.ExecuteQuery("SELECT TOP (1000) [id], [name], [email] FROM [SPAL].[dbo].[user]");
 
             return Results.Ok(user);
         }

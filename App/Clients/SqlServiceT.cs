@@ -29,7 +29,7 @@ namespace SPAL.App.Clients
             throw new NotImplementedException();
         }
 
-        public async Task<IReadOnlyCollection<T>> SubmitQuery(string query)
+        public async Task<IReadOnlyCollection<T>> ExecuteQuery(string query)
         {
             if (string.IsNullOrWhiteSpace(query))
             {

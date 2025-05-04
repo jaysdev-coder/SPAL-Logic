@@ -1,6 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
-
-namespace SPAL.App.Clients
+﻿namespace SPAL.App.Clients
 {
     public class SqlService : ISqlService
     {
@@ -13,7 +11,7 @@ namespace SPAL.App.Clients
             throw new NotImplementedException();
         }
 
-        public Task<IReadOnlyCollection<dynamic>> SubmitQuery(string query)
+        public Task<IReadOnlyCollection<dynamic>> ExecuteQuery(string query)
         {
             throw new NotImplementedException();
         }
