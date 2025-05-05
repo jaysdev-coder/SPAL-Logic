@@ -7,7 +7,7 @@ namespace SPAL.App.Clients
     {
         private readonly string _connectionString;
 
-        public SqlServiceT(string connectionString = "Server=.;Database=SPAL;Trusted_Connection=True;TrustServerCertificate=True")
+        public SqlServiceT(string connectionString)
         {
             if (string.IsNullOrWhiteSpace(connectionString))
             {
