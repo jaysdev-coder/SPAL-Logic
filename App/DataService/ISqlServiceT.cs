@@ -1,6 +1,6 @@
 ﻿using SPAL.App.Models;
 
-namespace SPAL.App.Clients
+namespace SPAL.App.DataService
 {
     public interface ISqlServiceT<T> : IQueryService where T : ITableModel
     {

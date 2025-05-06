@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 using Microsoft.AspNetCore.Mvc;
-using SPAL.App.Clients;
+using SPAL.App.DataService;
 using SPAL.App.Models;
 
 namespace SPAL.App.Routes

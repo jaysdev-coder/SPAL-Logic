@@ -1,4 +1,4 @@
-﻿namespace SPAL.App.Clients
+﻿namespace SPAL.App.DataService
 {
     public interface ISqlService : IQueryService
     {

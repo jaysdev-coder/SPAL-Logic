@@ -2,7 +2,7 @@
 using Microsoft.Data.SqlClient;
 using Dapper;
 
-namespace SPAL.App.Clients
+namespace SPAL.App.DataService
 {
     public class SqlServiceT<T> : ISqlServiceT<T> where T : ITableModel
     {
@@ -18,12 +18,6 @@ namespace SPAL.App.Clients
             _connectionString = connectionString;
         }
 
-        public async Task<Stream> GetResultStream(string query)
-        {
-            throw new NotImplementedException();
-        }
-
-
         public async Task Submit(string query)
         {
             // Implement Submit method
@@ -38,6 +32,11 @@ namespace SPAL.App.Clients
             var results = await connection.QueryAsync<T>(query);
 
             return results.ToList().AsReadOnly();
+        }
+
+        public Task<Stream> GetResultStream(string query)
+        {
+            throw new NotImplementedException();
         }
     }
 }
