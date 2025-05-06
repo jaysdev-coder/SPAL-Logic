@@ -1,4 +1,5 @@
-﻿namespace SPAL.App.Models;
+﻿using AWRD.DataService.Model;
+namespace SPAL.App.Models;
 
 public class UserModel : ITableModel
 {
