@@ -1,5 +1,7 @@
 ﻿using AWRD.DataService;
+using AWRD.Queries;
 using SPAL.App.Models;
+using SPAL.App.Queries;
 using static SPAL.App.Setting.AppEnv;
 
 namespace SPAL.App.Infrastructure
@@ -11,6 +13,14 @@ namespace SPAL.App.Infrastructure
             services.AddTransient<ISqlServiceT<UserModel>>(provider =>
             {
                 return new SqlServiceT<UserModel>(DatabaseConnectionString);
+            });
+        }
+
+        public static void AddQueryServices(this IServiceCollection services)
+        {
+            services.AddTransient<ISqlQueryT<UserModel>>(provider =>
+            {
+                return new UserQuery();
             });
         }
     }
