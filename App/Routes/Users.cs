@@ -16,7 +16,7 @@ namespace SPAL.App.Routes
         [Description("Get users")]
         internal static async Task<IResult> Get(
             [FromServices]ISqlServiceT<UserModel> userClient, 
-            [FromServices]ISqlQueryT<UserModel> userQuery)
+            [FromServices]SqlQueryTBase<UserModel> userQuery)
         {
             var user = await userClient.ExecuteQuery(userQuery.CompileQuery());
 

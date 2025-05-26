@@ -18,7 +18,7 @@ namespace SPAL.App.Infrastructure
 
         public static void AddQueryServices(this IServiceCollection services)
         {
-            services.AddTransient<ISqlQueryT<UserModel>>(provider =>
+            services.AddTransient<SqlQueryTBase<UserModel>>(provider =>
             {
                 return new UserQuery();
             });

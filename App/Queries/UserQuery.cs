@@ -4,7 +4,7 @@ using SqlKata;
 
 namespace SPAL.App.Queries
 {
-    public class UserQuery : ISqlQueryT<UserModel>
+    public class UserQuery : SqlQueryTBase<UserModel>
     {
         public override string EntityName => UserModel.Label;
 
