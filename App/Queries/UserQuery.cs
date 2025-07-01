@@ -4,9 +4,9 @@ using SqlKata;
 
 namespace SPAL.App.Queries
 {
-    public class UserQuery : SqlQueryTBase<UserModel>
+    public class UserQuery : SqlQueryTBase<UserReadModel>
     {
-        public override string EntityName => UserModel.Label;
+        public override string EntityName => UserReadModel.Label;
 
         public string? Name { get; set; }
         public string? Email { get; set; }
@@ -20,7 +20,7 @@ namespace SPAL.App.Queries
         {
             if(!string.IsNullOrEmpty(Name))
             {
-                query.Where(nameof(UserModel.Name), "=", Name);
+                query.Where(nameof(UserReadModel.Name), "=", Name);
             }
         }
 
@@ -28,7 +28,7 @@ namespace SPAL.App.Queries
         {
             if (!string.IsNullOrEmpty(Email))
             {
-                query.Where(nameof(UserModel.Email), "=", Email);
+                query.Where(nameof(UserReadModel.Email), "=", Email);
             }
         }
 
