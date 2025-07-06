@@ -10,15 +10,15 @@ namespace SPAL.App.Infrastructure
     {
         public static void AddSqlServices(this IServiceCollection services)
         {
-            services.AddTransient<ISqlServiceT<UserReadModel>>(provider =>
+            services.AddTransient<ISqlServiceT<UserTableModel>>(provider =>
             {
-                return new SqlServiceT<UserReadModel>(DatabaseConnectionString);
+                return new SqlServiceT<UserTableModel>(DatabaseConnectionString);
             });
         }
 
         public static void AddQueryServices(this IServiceCollection services)
         {
-            services.AddTransient<SqlQueryTBase<UserReadModel>>(provider =>
+            services.AddTransient<SqlQueryTBase<UserTableModel>>(provider =>
             {
                 return new UserQuery();
             });
