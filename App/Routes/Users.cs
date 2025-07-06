@@ -2,7 +2,7 @@
 using AWRD.DataService;
 using AWRD.Queries;
 using Microsoft.AspNetCore.Mvc;
-using SPAL.App.Models;
+using SPAL.App.Models.Table;
 
 namespace SPAL.App.Routes
 {

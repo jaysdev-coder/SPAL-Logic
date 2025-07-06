@@ -1,6 +1,6 @@
 ﻿using AWRD.DataService;
 using AWRD.Queries;
-using SPAL.App.Models;
+using SPAL.App.Models.Table;
 using SPAL.App.Queries;
 using static SPAL.App.Setting.AppEnv;
 

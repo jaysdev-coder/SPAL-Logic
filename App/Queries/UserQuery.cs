@@ -1,5 +1,5 @@
 ﻿using AWRD.Queries;
-using SPAL.App.Models;
+using SPAL.App.Models.Table;
 using SqlKata;
 
 namespace SPAL.App.Queries

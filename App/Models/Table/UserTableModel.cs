@@ -1,5 +1,5 @@
 ﻿using AWRD.DataService.Model;
-namespace SPAL.App.Models;
+namespace SPAL.App.Models.Table;
 
 public class UserTableModel : ITableModel
 {
