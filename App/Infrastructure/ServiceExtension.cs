@@ -1,5 +1,7 @@
 ﻿using AWRD.DataService;
 using AWRD.Queries;
+using Microsoft.Extensions.DependencyInjection;
+using SPAL.App.Models.MapperProfiles;
 using SPAL.App.Models.Table;
 using SPAL.App.Queries;
 using static SPAL.App.Setting.AppEnv;
@@ -22,6 +24,11 @@ namespace SPAL.App.Infrastructure
             {
                 return new UserQuery();
             });
+        }
+
+        public static void AddMapperServices(this IServiceCollection services)
+        {
+            services.AddAutoMapper(cfg => cfg.AddProfile<UserProfile>());
         }
     }
 }

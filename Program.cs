@@ -8,6 +8,7 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSqlServices();
 builder.Services.AddQueryServices();
+builder.Services.AddMapperServices();
 
 builder.Services.AddSwaggerGen(c =>
 {

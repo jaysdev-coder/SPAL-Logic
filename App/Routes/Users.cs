@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel;
+using AutoMapper;
 using AWRD.DataService;
 using AWRD.Queries;
 using Microsoft.AspNetCore.Mvc;
+using SPAL.App.Models;
 using SPAL.App.Models.Table;
 
 namespace SPAL.App.Routes
@@ -15,12 +17,15 @@ namespace SPAL.App.Routes
 
         [Description("Get users")]
         internal static async Task<IResult> Get(
-            [FromServices]ISqlServiceT<UserTableModel> userClient, 
-            [FromServices]SqlQueryTBase<UserTableModel> userQuery)
+            [FromServices] ISqlServiceT<UserTableModel> userClient,
+            [FromServices] SqlQueryTBase<UserTableModel> userQuery,
+            [FromServices] IMapper mapper)
         {
-            var user = await userClient.ExecuteQuery(userQuery.CompileQuery());
+            var users = await userClient.ExecuteQuery(userQuery.CompileQuery());
 
-            return TypedResults.Ok(user);
+            var userReadModels = mapper.Map<IEnumerable<UserReadModel>>(users);
+
+            return TypedResults.Ok(userReadModels);
         }
     }
 }
