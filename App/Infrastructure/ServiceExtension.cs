@@ -1,4 +1,4 @@
-﻿using AWRD.DataService;
+﻿using AWRD.QueryService;
 using AWRD.Queries;
 using Microsoft.Extensions.DependencyInjection;
 using SPAL.App.Models.MapperProfiles;

@@ -1,4 +1,4 @@
-﻿using AWRD.DataService.Model;
+﻿using AWRD.QueryService.Model;
 namespace SPAL.App.Models.Table;
 
 public class UserTableModel : ITableModel

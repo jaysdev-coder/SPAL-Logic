@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 using AutoMapper;
-using AWRD.DataService;
+using AWRD.QueryService;
 using AWRD.Queries;
 using Microsoft.AspNetCore.Mvc;
 using SPAL.App.Models;
