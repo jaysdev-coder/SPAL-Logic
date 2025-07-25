@@ -1,4 +1,4 @@
-﻿using AWRD.Queries;
+﻿using AWRD.QueryService.Queries;
 using SPAL.App.Models.Table;
 using SqlKata;
 

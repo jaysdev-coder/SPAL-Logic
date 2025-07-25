@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel;
 using AutoMapper;
 using AWRD.QueryService;
-using AWRD.Queries;
 using Microsoft.AspNetCore.Mvc;
 using SPAL.App.Models;
 using SPAL.App.Models.Table;
+using AWRD.QueryService.Queries;
 
 namespace SPAL.App.Routes
 {

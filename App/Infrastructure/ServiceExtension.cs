@@ -1,10 +1,10 @@
 ﻿using AWRD.QueryService;
-using AWRD.Queries;
 using Microsoft.Extensions.DependencyInjection;
 using SPAL.App.Models.MapperProfiles;
 using SPAL.App.Models.Table;
 using SPAL.App.Queries;
 using static SPAL.App.Setting.AppEnv;
+using AWRD.QueryService.Queries;
 
 namespace SPAL.App.Infrastructure
 {
