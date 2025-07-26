@@ -6,9 +6,12 @@ namespace SPAL.App.Setting
 
         static AppEnv()
         {
+            var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+            var appSettingsFile = $"appsettings.{environment}.json";
+
             Configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory()) 
-                .AddJsonFile("appsettings.Development.json", optional: false, reloadOnChange: true)
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile(appSettingsFile, optional: false, reloadOnChange: true)
                 .Build();
         }
 
